@@ -40,9 +40,25 @@ public class GeneratorConfig {
 
 	private boolean comment;
 
+	private boolean needToStringHashcodeEquals;
+
 	private boolean annotation;
 
+	private boolean useActualColumnNames;
+
+	private boolean useExampe;
+
 	private String generateKeys;
+
+	private String encoding;
+
+	public boolean isUseExampe() {
+		return useExampe;
+	}
+
+	public void setUseExampe(boolean useExampe) {
+		this.useExampe = useExampe;
+	}
 
 	public String getName() {
 		return name;
@@ -148,12 +164,28 @@ public class GeneratorConfig {
 		this.comment = comment;
 	}
 
-	public boolean isAnnotation() {
+    public boolean isNeedToStringHashcodeEquals() {
+        return needToStringHashcodeEquals;
+    }
+
+    public void setNeedToStringHashcodeEquals(boolean needToStringHashcodeEquals) {
+        this.needToStringHashcodeEquals = needToStringHashcodeEquals;
+    }
+
+    public boolean isAnnotation() {
 		return annotation;
 	}
 
 	public void setAnnotation(boolean annotation) {
 		this.annotation = annotation;
+	}
+
+	public boolean isUseActualColumnNames() {
+		return useActualColumnNames;
+	}
+
+	public void setUseActualColumnNames(boolean useActualColumnNames) {
+		this.useActualColumnNames = useActualColumnNames;
 	}
 
 	public String getMapperName() {
@@ -171,4 +203,12 @@ public class GeneratorConfig {
 	public void setGenerateKeys(String generateKeys) {
 		this.generateKeys = generateKeys;
 	}
+
+    public String getEncoding() {
+        return encoding;
+    }
+
+    public void setEncoding(String encoding) {
+        this.encoding = encoding;
+    }
 }
